@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '+er$^@qh(=&9gm_zo33c9_y_&5#o@c#3grc5a$lqc67jy@bygg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=[BASE_DIR / 'static/',]
+STATIC_ROOT=[BASE_DIR / 'assets/',]
 
-STATICFILES_DIRS=[BASE_DIR / 'media',]
+STATICFILES_DIRS=[BASE_DIR / 'static',]
 django_heroku.settings(locals())
